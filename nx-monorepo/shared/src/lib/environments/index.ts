@@ -1,1 +1,1 @@
-export * from './lib/environment.token';
+export * from './environment.token';

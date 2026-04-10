@@ -1,1 +1,1 @@
-export * from './lib/notification-bell/notification-bell.component';
+export * from './notification-bell/notification-bell.component';

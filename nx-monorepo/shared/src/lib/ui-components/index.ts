@@ -1,3 +1,3 @@
-export * from './lib/button/button.component';
-export * from './lib/card/card.component';
-export * from './lib/modal/modal.component';
+export * from './button/button.component';
+export * from './card/card.component';
+export * from './modal/modal.component';

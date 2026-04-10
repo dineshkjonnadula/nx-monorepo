@@ -1,2 +1,2 @@
-export * from './lib/auth.service';
-export * from './lib/notifications.service';
+export * from './auth.service';
+export * from './notifications.service';

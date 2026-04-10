@@ -1,2 +1,2 @@
-export * from './lib/date.utils';
-export * from './lib/string.utils';
+export * from './date.utils';
+export * from './string.utils';
