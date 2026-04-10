@@ -57,6 +57,68 @@
   },
   "nxJsonPlugins": [],
   "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".eslintrc.json",
+        "hash": "17966556153160103599"
+      },
+      {
+        "file": ".nx/cache/d/server-process.json",
+        "hash": "5149792721095690292"
+      },
+      {
+        "file": ".nx/cache/file-map.json",
+        "hash": "1615512086267442076"
+      },
+      {
+        "file": ".nx/cache/lockfile.hash",
+        "hash": "15778590200023925512"
+      },
+      {
+        "file": ".nx/cache/parsed-lock-file.json",
+        "hash": "6224100475607219955"
+      },
+      {
+        "file": ".nx/cache/project-graph.json",
+        "hash": "7936907601537399431"
+      },
+      {
+        "file": ".yarn/install-state.gz",
+        "hash": "2718084999381715073"
+      },
+      {
+        "file": ".yarnrc.yml",
+        "hash": "5508691030562277211"
+      },
+      {
+        "file": "README.md",
+        "hash": "7965246903721023725"
+      },
+      {
+        "file": "angular.json",
+        "hash": "9514216675280927265"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "13677018125728124130"
+      },
+      {
+        "file": "nx.json",
+        "hash": "16576820999503812368"
+      },
+      {
+        "file": "package.json",
+        "hash": "16171331020996591221"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "11331699392798861556"
+      },
+      {
+        "file": "yarn.lock",
+        "hash": "7054412468593746738"
+      }
+    ],
     "projectFileMap": {
       "shared-util-helpers": [
         {
@@ -93,6 +155,98 @@
         },
         {
           "file": "shared/util-helpers/tsconfig.spec.json",
+          "hash": "13779545520510432797"
+        }
+      ],
+      "shared-models": [
+        {
+          "file": "shared/models/.eslintrc.json",
+          "hash": "3871402280238912530"
+        },
+        {
+          "file": "shared/models/jest.config.ts",
+          "hash": "4781155137767108756"
+        },
+        {
+          "file": "shared/models/project.json",
+          "hash": "2883606394746662346"
+        },
+        {
+          "file": "shared/models/src/index.ts",
+          "hash": "3389595401907208059"
+        },
+        {
+          "file": "shared/models/src/lib/api.model.ts",
+          "hash": "4086217624979364931"
+        },
+        {
+          "file": "shared/models/src/lib/user.model.ts",
+          "hash": "16927116866463169408"
+        },
+        {
+          "file": "shared/models/tsconfig.json",
+          "hash": "11769991321707878720"
+        },
+        {
+          "file": "shared/models/tsconfig.lib.json",
+          "hash": "7294512318543526576"
+        },
+        {
+          "file": "shared/models/tsconfig.spec.json",
+          "hash": "13779545520510432797"
+        }
+      ],
+      "shared-ui-components": [
+        {
+          "file": "shared/ui-components/.eslintrc.json",
+          "hash": "3871402280238912530"
+        },
+        {
+          "file": "shared/ui-components/jest.config.ts",
+          "hash": "4474342237440622749"
+        },
+        {
+          "file": "shared/ui-components/project.json",
+          "hash": "10918005743397579956"
+        },
+        {
+          "file": "shared/ui-components/src/index.ts",
+          "hash": "14188997807336526662"
+        },
+        {
+          "file": "shared/ui-components/src/lib/button/button.component.ts",
+          "hash": "8896239185704184625",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "shared/ui-components/src/lib/card/card.component.ts",
+          "hash": "14431163803674399833",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "shared/ui-components/src/lib/modal/modal.component.ts",
+          "hash": "15903927457940153722",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "shared/ui-components/tsconfig.json",
+          "hash": "11769991321707878720"
+        },
+        {
+          "file": "shared/ui-components/tsconfig.lib.json",
+          "hash": "7294512318543526576"
+        },
+        {
+          "file": "shared/ui-components/tsconfig.spec.json",
           "hash": "13779545520510432797"
         }
       ],
@@ -194,99 +348,6 @@
         {
           "file": "projects/project-one/tsconfig.spec.json",
           "hash": "4388071253978624603"
-        }
-      ],
-      "shared-data-access-api": [
-        {
-          "file": "shared/data-access-api/.eslintrc.json",
-          "hash": "3871402280238912530"
-        },
-        {
-          "file": "shared/data-access-api/jest.config.ts",
-          "hash": "6396500363671514492"
-        },
-        {
-          "file": "shared/data-access-api/project.json",
-          "hash": "5346917270164331712"
-        },
-        {
-          "file": "shared/data-access-api/src/index.ts",
-          "hash": "7383741239879989919"
-        },
-        {
-          "file": "shared/data-access-api/src/lib/auth.service.ts",
-          "hash": "5230117240106924446",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common/http",
-            "npm:rxjs",
-            "shared-environments",
-            "shared-models"
-          ]
-        },
-        {
-          "file": "shared/data-access-api/src/lib/notifications.service.ts",
-          "hash": "4423909096554076853",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common/http",
-            "npm:rxjs",
-            "shared-environments",
-            "shared-models"
-          ]
-        },
-        {
-          "file": "shared/data-access-api/tsconfig.json",
-          "hash": "11769991321707878720"
-        },
-        {
-          "file": "shared/data-access-api/tsconfig.lib.json",
-          "hash": "7294512318543526576"
-        },
-        {
-          "file": "shared/data-access-api/tsconfig.spec.json",
-          "hash": "13779545520510432797"
-        }
-      ],
-      "shared-feature-notifications": [
-        {
-          "file": "shared/feature-notifications/.eslintrc.json",
-          "hash": "3871402280238912530"
-        },
-        {
-          "file": "shared/feature-notifications/jest.config.ts",
-          "hash": "9331547688497788619"
-        },
-        {
-          "file": "shared/feature-notifications/project.json",
-          "hash": "14132068565640571102"
-        },
-        {
-          "file": "shared/feature-notifications/src/index.ts",
-          "hash": "8451237363368288126"
-        },
-        {
-          "file": "shared/feature-notifications/src/lib/notification-bell/notification-bell.component.ts",
-          "hash": "6263720986412697874",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common",
-            "shared-data-access-api",
-            "shared-models",
-            "shared-util-helpers"
-          ]
-        },
-        {
-          "file": "shared/feature-notifications/tsconfig.json",
-          "hash": "11769991321707878720"
-        },
-        {
-          "file": "shared/feature-notifications/tsconfig.lib.json",
-          "hash": "7294512318543526576"
-        },
-        {
-          "file": "shared/feature-notifications/tsconfig.spec.json",
-          "hash": "13779545520510432797"
         }
       ],
       "shared-feature-auth": [
@@ -465,98 +526,6 @@
           "hash": "4388071253978624603"
         }
       ],
-      "shared-models": [
-        {
-          "file": "shared/models/.eslintrc.json",
-          "hash": "3871402280238912530"
-        },
-        {
-          "file": "shared/models/jest.config.ts",
-          "hash": "4781155137767108756"
-        },
-        {
-          "file": "shared/models/project.json",
-          "hash": "2883606394746662346"
-        },
-        {
-          "file": "shared/models/src/index.ts",
-          "hash": "3389595401907208059"
-        },
-        {
-          "file": "shared/models/src/lib/api.model.ts",
-          "hash": "4086217624979364931"
-        },
-        {
-          "file": "shared/models/src/lib/user.model.ts",
-          "hash": "16927116866463169408"
-        },
-        {
-          "file": "shared/models/tsconfig.json",
-          "hash": "11769991321707878720"
-        },
-        {
-          "file": "shared/models/tsconfig.lib.json",
-          "hash": "7294512318543526576"
-        },
-        {
-          "file": "shared/models/tsconfig.spec.json",
-          "hash": "13779545520510432797"
-        }
-      ],
-      "shared-ui-components": [
-        {
-          "file": "shared/ui-components/.eslintrc.json",
-          "hash": "3871402280238912530"
-        },
-        {
-          "file": "shared/ui-components/jest.config.ts",
-          "hash": "4474342237440622749"
-        },
-        {
-          "file": "shared/ui-components/project.json",
-          "hash": "10918005743397579956"
-        },
-        {
-          "file": "shared/ui-components/src/index.ts",
-          "hash": "14188997807336526662"
-        },
-        {
-          "file": "shared/ui-components/src/lib/button/button.component.ts",
-          "hash": "8896239185704184625",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common"
-          ]
-        },
-        {
-          "file": "shared/ui-components/src/lib/card/card.component.ts",
-          "hash": "14431163803674399833",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common"
-          ]
-        },
-        {
-          "file": "shared/ui-components/src/lib/modal/modal.component.ts",
-          "hash": "15903927457940153722",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common"
-          ]
-        },
-        {
-          "file": "shared/ui-components/tsconfig.json",
-          "hash": "11769991321707878720"
-        },
-        {
-          "file": "shared/ui-components/tsconfig.lib.json",
-          "hash": "7294512318543526576"
-        },
-        {
-          "file": "shared/ui-components/tsconfig.spec.json",
-          "hash": "13779545520510432797"
-        }
-      ],
       "shared-environments": [
         {
           "file": "shared/environments/.eslintrc.json",
@@ -593,65 +562,100 @@
           "file": "shared/environments/tsconfig.spec.json",
           "hash": "13779545520510432797"
         }
+      ],
+      "shared-data-access-api": [
+        {
+          "file": "shared/data-access-api/.eslintrc.json",
+          "hash": "3871402280238912530"
+        },
+        {
+          "file": "shared/data-access-api/jest.config.ts",
+          "hash": "6396500363671514492"
+        },
+        {
+          "file": "shared/data-access-api/project.json",
+          "hash": "5346917270164331712"
+        },
+        {
+          "file": "shared/data-access-api/src/index.ts",
+          "hash": "7383741239879989919"
+        },
+        {
+          "file": "shared/data-access-api/src/lib/auth.service.ts",
+          "hash": "5230117240106924446",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common/http",
+            "npm:rxjs",
+            "shared-environments",
+            "shared-models"
+          ]
+        },
+        {
+          "file": "shared/data-access-api/src/lib/notifications.service.ts",
+          "hash": "4423909096554076853",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common/http",
+            "npm:rxjs",
+            "shared-environments",
+            "shared-models"
+          ]
+        },
+        {
+          "file": "shared/data-access-api/tsconfig.json",
+          "hash": "11769991321707878720"
+        },
+        {
+          "file": "shared/data-access-api/tsconfig.lib.json",
+          "hash": "7294512318543526576"
+        },
+        {
+          "file": "shared/data-access-api/tsconfig.spec.json",
+          "hash": "13779545520510432797"
+        }
+      ],
+      "shared-feature-notifications": [
+        {
+          "file": "shared/feature-notifications/.eslintrc.json",
+          "hash": "3871402280238912530"
+        },
+        {
+          "file": "shared/feature-notifications/jest.config.ts",
+          "hash": "9331547688497788619"
+        },
+        {
+          "file": "shared/feature-notifications/project.json",
+          "hash": "14132068565640571102"
+        },
+        {
+          "file": "shared/feature-notifications/src/index.ts",
+          "hash": "8451237363368288126"
+        },
+        {
+          "file": "shared/feature-notifications/src/lib/notification-bell/notification-bell.component.ts",
+          "hash": "6263720986412697874",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "shared-data-access-api",
+            "shared-models",
+            "shared-util-helpers"
+          ]
+        },
+        {
+          "file": "shared/feature-notifications/tsconfig.json",
+          "hash": "11769991321707878720"
+        },
+        {
+          "file": "shared/feature-notifications/tsconfig.lib.json",
+          "hash": "7294512318543526576"
+        },
+        {
+          "file": "shared/feature-notifications/tsconfig.spec.json",
+          "hash": "13779545520510432797"
+        }
       ]
-    },
-    "nonProjectFiles": [
-      {
-        "file": ".eslintrc.json",
-        "hash": "17966556153160103599"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "1176697649400710470"
-      },
-      {
-        "file": ".nx/cache/file-map.json",
-        "hash": "7121789710376760505"
-      },
-      {
-        "file": ".nx/cache/project-graph.json",
-        "hash": "10505486951397980327"
-      },
-      {
-        "file": ".yarn/install-state.gz",
-        "hash": "8893112024046560312"
-      },
-      {
-        "file": ".yarn/releases/yarn-4.13.0.cjs",
-        "hash": "17029917718381966054"
-      },
-      {
-        "file": ".yarnrc.yml",
-        "hash": "5508691030562277211"
-      },
-      {
-        "file": "README.md",
-        "hash": "7965246903721023725"
-      },
-      {
-        "file": "angular.json",
-        "hash": "9514216675280927265"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "13677018125728124130"
-      },
-      {
-        "file": "nx.json",
-        "hash": "16576820999503812368"
-      },
-      {
-        "file": "package.json",
-        "hash": "16171331020996591221"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "11331699392798861556"
-      },
-      {
-        "file": "yarn.lock",
-        "hash": "7054412468593746738"
-      }
-    ]
+    }
   }
 }
