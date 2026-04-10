@@ -1,0 +1,6 @@
+.nx/
+.yarn/
+node_modules/
+dist/
+coverage/
+.angular/

@@ -14,11 +14,17 @@
             "depConstraints": [
               {
                 "sourceTag": "scope:project-one",
-                "onlyDependOnLibsWithTags": ["scope:shared", "scope:project-one"]
+                "onlyDependOnLibsWithTags": [
+                  "scope:shared",
+                  "scope:project-one"
+                ]
               },
               {
                 "sourceTag": "scope:project-two",
-                "onlyDependOnLibsWithTags": ["scope:shared", "scope:project-two"]
+                "onlyDependOnLibsWithTags": [
+                  "scope:shared",
+                  "scope:project-two"
+                ]
               },
               {
                 "sourceTag": "type:feature",
@@ -32,7 +38,11 @@
               },
               {
                 "sourceTag": "type:ui",
-                "onlyDependOnLibsWithTags": ["type:ui", "type:util", "type:models"]
+                "onlyDependOnLibsWithTags": [
+                  "type:ui",
+                  "type:util",
+                  "type:models"
+                ]
               },
               {
                 "sourceTag": "type:data-access",

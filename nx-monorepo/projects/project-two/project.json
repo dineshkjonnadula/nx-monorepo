@@ -15,15 +15,26 @@
         "main": "projects/project-two/src/main.ts",
         "polyfills": ["zone.js"],
         "tsConfig": "projects/project-two/tsconfig.app.json",
-        "assets": ["projects/project-two/src/favicon.ico", "projects/project-two/src/assets"],
+        "assets": [
+          "projects/project-two/src/favicon.ico",
+          "projects/project-two/src/assets"
+        ],
         "styles": [],
         "scripts": []
       },
       "configurations": {
         "production": {
           "budgets": [
-            { "type": "initial", "maximumWarning": "500kb", "maximumError": "1mb" },
-            { "type": "anyComponentStyle", "maximumWarning": "2kb", "maximumError": "4kb" }
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
           ],
           "outputHashing": "all",
           "optimization": true,
@@ -52,7 +63,12 @@
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
-      "options": { "lintFilePatterns": ["projects/project-two/**/*.ts", "projects/project-two/**/*.html"] }
+      "options": {
+        "lintFilePatterns": [
+          "projects/project-two/**/*.ts",
+          "projects/project-two/**/*.html"
+        ]
+      }
     },
     "test": {
       "executor": "@nx/jest:jest",

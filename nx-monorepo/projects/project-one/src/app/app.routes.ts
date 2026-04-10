@@ -13,12 +13,16 @@ export const appRoutes: Routes = [
       {
         path: 'dashboard',
         loadComponent: () =>
-          import('./feature-dashboard/dashboard.component').then(m => m.DashboardComponent)
+          import('./feature-dashboard/dashboard.component').then(
+            (m) => m.DashboardComponent
+          )
       },
       {
         path: 'reports',
         loadComponent: () =>
-          import('./feature-reports/reports.component').then(m => m.ReportsComponent)
+          import('./feature-reports/reports.component').then(
+            (m) => m.ReportsComponent
+          )
       },
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
     ]

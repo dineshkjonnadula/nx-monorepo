@@ -8,4 +8,6 @@ export interface AppEnvironment {
   authTokenKey: string;
 }
 
-export const APP_ENVIRONMENT = new InjectionToken<AppEnvironment>('APP_ENVIRONMENT');
+export const APP_ENVIRONMENT = new InjectionToken<AppEnvironment>(
+  'APP_ENVIRONMENT'
+);

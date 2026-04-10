@@ -13,21 +13,23 @@ export class NotificationsService {
   notifications$ = this.notificationsSubject.asObservable();
 
   get unreadCount(): number {
-    return this.notificationsSubject.value.filter(n => !n.read).length;
+    return this.notificationsSubject.value.filter((n) => !n.read).length;
   }
 
   getAll(): Observable<ApiResponse<Notification[]>> {
     return this.http
       .get<ApiResponse<Notification[]>>(`${this.env.apiBaseUrl}/notifications`)
-      .pipe(tap(res => this.notificationsSubject.next(res.data)));
+      .pipe(tap((res) => this.notificationsSubject.next(res.data)));
   }
 
   markAsRead(id: string): Observable<ApiResponse<Notification>> {
     return this.http
-      .patch<ApiResponse<Notification>>(`${this.env.apiBaseUrl}/notifications/${id}/read`, {})
+      .patch<
+        ApiResponse<Notification>
+      >(`${this.env.apiBaseUrl}/notifications/${id}/read`, {})
       .pipe(
         tap(() => {
-          const updated = this.notificationsSubject.value.map(n =>
+          const updated = this.notificationsSubject.value.map((n) =>
             n.id === id ? { ...n, read: true } : n
           );
           this.notificationsSubject.next(updated);
@@ -40,7 +42,10 @@ export class NotificationsService {
       .patch<void>(`${this.env.apiBaseUrl}/notifications/read-all`, {})
       .pipe(
         tap(() => {
-          const updated = this.notificationsSubject.value.map(n => ({ ...n, read: true }));
+          const updated = this.notificationsSubject.value.map((n) => ({
+            ...n,
+            read: true
+          }));
           this.notificationsSubject.next(updated);
         })
       );

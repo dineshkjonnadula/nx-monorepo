@@ -90,16 +90,16 @@ nx g @nx/angular:library shared-feature-xyz --directory=shared/src/lib --tags="s
 
 ## Dependency boundary tags
 
-| Tag | Meaning |
-|---|---|
-| `scope:project-one` | Belongs to project-one only |
-| `scope:project-two` | Belongs to project-two only |
-| `scope:shared` | Usable by any project |
-| `type:feature` | Smart feature lib (may inject services) |
-| `type:ui` | Dumb UI lib (no service injection) |
-| `type:data-access` | Services & HTTP |
-| `type:util` | Pure helpers, zero Angular deps |
-| `type:models` | Interfaces & types only |
+| Tag                 | Meaning                                 |
+| ------------------- | --------------------------------------- |
+| `scope:project-one` | Belongs to project-one only             |
+| `scope:project-two` | Belongs to project-two only             |
+| `scope:shared`      | Usable by any project                   |
+| `type:feature`      | Smart feature lib (may inject services) |
+| `type:ui`           | Dumb UI lib (no service injection)      |
+| `type:data-access`  | Services & HTTP                         |
+| `type:util`         | Pure helpers, zero Angular deps         |
+| `type:models`       | Interfaces & types only                 |
 
 ---
 
@@ -116,7 +116,6 @@ Examples exported from this path:
 - `User`, `AuthUser`, `Notification`, `ApiResponse<T>`
 - `formatDate`, `timeAgo`, `slugify`, `isValidEmail`
 - `AppEnvironment`, `APP_ENVIRONMENT`
-
 
 ---
 

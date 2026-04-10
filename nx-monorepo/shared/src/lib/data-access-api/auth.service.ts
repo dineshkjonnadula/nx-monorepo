@@ -24,11 +24,11 @@ export class AuthService {
     return this.http
       .post<AuthUser>(`${this.env.apiBaseUrl}/auth/login`, { email, password })
       .pipe(
-        tap(user => {
+        tap((user) => {
           localStorage.setItem(this.env.authTokenKey, user.token);
           this.currentUserSubject.next(user);
         }),
-        catchError(err => throwError(() => err))
+        catchError((err) => throwError(() => err))
       );
   }
 

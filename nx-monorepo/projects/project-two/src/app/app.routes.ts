@@ -9,18 +9,22 @@ export const appRoutes: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('./shell/shell.component').then(m => m.ShellComponent),
+      import('./shell/shell.component').then((m) => m.ShellComponent),
     canActivate: [authGuard],
     children: [
       {
         path: 'analytics',
         loadComponent: () =>
-          import('./feature-analytics/analytics.component').then(m => m.AnalyticsComponent)
+          import('./feature-analytics/analytics.component').then(
+            (m) => m.AnalyticsComponent
+          )
       },
       {
         path: 'settings',
         loadComponent: () =>
-          import('./feature-settings/settings.component').then(m => m.SettingsComponent)
+          import('./feature-settings/settings.component').then(
+            (m) => m.SettingsComponent
+          )
       },
       { path: '', redirectTo: 'analytics', pathMatch: 'full' }
     ]

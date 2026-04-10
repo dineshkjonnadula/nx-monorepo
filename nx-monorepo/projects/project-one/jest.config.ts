@@ -5,7 +5,10 @@ export default {
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',
-      { tsconfig: '<rootDir>/tsconfig.spec.json', stringifyContentPathRegex: '\\.(html|svg)$' }
+      {
+        tsconfig: '<rootDir>/tsconfig.spec.json',
+        stringifyContentPathRegex: '\\.(html|svg)$'
+      }
     ]
   }
 };
