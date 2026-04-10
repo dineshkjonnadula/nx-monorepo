@@ -1,0 +1,42 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "lib": ["ES2022", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@my-workspace/shared/feature-auth": [
+        "shared/feature-auth/src/index.ts"
+      ],
+      "@my-workspace/shared/feature-notifications": [
+        "shared/feature-notifications/src/index.ts"
+      ],
+      "@my-workspace/shared/ui-components": [
+        "shared/ui-components/src/index.ts"
+      ],
+      "@my-workspace/shared/data-access-api": [
+        "shared/data-access-api/src/index.ts"
+      ],
+      "@my-workspace/shared/models": [
+        "shared/models/src/index.ts"
+      ],
+      "@my-workspace/shared/util-helpers": [
+        "shared/util-helpers/src/index.ts"
+      ],
+      "@my-workspace/shared/environments": [
+        "shared/environments/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

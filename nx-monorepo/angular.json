@@ -1,0 +1,244 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "cli": {
+    "packageManager": "npm",
+    "analytics": false
+  },
+  "projects": {
+    "project-one": {
+      "projectType": "application",
+      "root": "projects/project-one",
+      "sourceRoot": "projects/project-one/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/projects/project-one",
+            "index": "projects/project-one/src/index.html",
+            "main": "projects/project-one/src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "projects/project-one/tsconfig.app.json",
+            "assets": [
+              "projects/project-one/src/favicon.ico",
+              "projects/project-one/src/assets"
+            ],
+            "styles": [],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                { "type": "initial", "maximumWarning": "500kb", "maximumError": "1mb" },
+                { "type": "anyComponentStyle", "maximumWarning": "2kb", "maximumError": "4kb" }
+              ],
+              "outputHashing": "all",
+              "optimization": true,
+              "buildOptimizer": true
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": { "port": 4200 },
+          "configurations": {
+            "production": { "browserTarget": "project-one:build:production" },
+            "development": { "browserTarget": "project-one:build:development" }
+          },
+          "defaultConfiguration": "development"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": ["zone.js", "zone.js/testing"],
+            "tsConfig": "projects/project-one/tsconfig.spec.json",
+            "assets": [
+              "projects/project-one/src/favicon.ico",
+              "projects/project-one/src/assets"
+            ],
+            "styles": [],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/project-one/**/*.ts",
+              "projects/project-one/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "project-two": {
+      "projectType": "application",
+      "root": "projects/project-two",
+      "sourceRoot": "projects/project-two/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/projects/project-two",
+            "index": "projects/project-two/src/index.html",
+            "main": "projects/project-two/src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "projects/project-two/tsconfig.app.json",
+            "assets": [
+              "projects/project-two/src/favicon.ico",
+              "projects/project-two/src/assets"
+            ],
+            "styles": [],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                { "type": "initial", "maximumWarning": "500kb", "maximumError": "1mb" },
+                { "type": "anyComponentStyle", "maximumWarning": "2kb", "maximumError": "4kb" }
+              ],
+              "outputHashing": "all",
+              "optimization": true,
+              "buildOptimizer": true
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": { "port": 4300 },
+          "configurations": {
+            "production": { "browserTarget": "project-two:build:production" },
+            "development": { "browserTarget": "project-two:build:development" }
+          },
+          "defaultConfiguration": "development"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": ["zone.js", "zone.js/testing"],
+            "tsConfig": "projects/project-two/tsconfig.spec.json",
+            "assets": [
+              "projects/project-two/src/favicon.ico",
+              "projects/project-two/src/assets"
+            ],
+            "styles": [],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/project-two/**/*.ts",
+              "projects/project-two/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-feature-auth": {
+      "projectType": "library",
+      "root": "shared/feature-auth",
+      "sourceRoot": "shared/feature-auth/src",
+      "prefix": "lib",
+      "architect": {
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": { "lintFilePatterns": ["shared/feature-auth/**/*.ts"] }
+        }
+      }
+    },
+    "shared-feature-notifications": {
+      "projectType": "library",
+      "root": "shared/feature-notifications",
+      "sourceRoot": "shared/feature-notifications/src",
+      "prefix": "lib",
+      "architect": {
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": { "lintFilePatterns": ["shared/feature-notifications/**/*.ts"] }
+        }
+      }
+    },
+    "shared-ui-components": {
+      "projectType": "library",
+      "root": "shared/ui-components",
+      "sourceRoot": "shared/ui-components/src",
+      "prefix": "lib",
+      "architect": {
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": { "lintFilePatterns": ["shared/ui-components/**/*.ts"] }
+        }
+      }
+    },
+    "shared-data-access-api": {
+      "projectType": "library",
+      "root": "shared/data-access-api",
+      "sourceRoot": "shared/data-access-api/src",
+      "prefix": "lib",
+      "architect": {
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": { "lintFilePatterns": ["shared/data-access-api/**/*.ts"] }
+        }
+      }
+    },
+    "shared-models": {
+      "projectType": "library",
+      "root": "shared/models",
+      "sourceRoot": "shared/models/src",
+      "prefix": "lib",
+      "architect": {
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": { "lintFilePatterns": ["shared/models/**/*.ts"] }
+        }
+      }
+    },
+    "shared-util-helpers": {
+      "projectType": "library",
+      "root": "shared/util-helpers",
+      "sourceRoot": "shared/util-helpers/src",
+      "prefix": "lib",
+      "architect": {
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": { "lintFilePatterns": ["shared/util-helpers/**/*.ts"] }
+        }
+      }
+    },
+    "shared-environments": {
+      "projectType": "library",
+      "root": "shared/environments",
+      "sourceRoot": "shared/environments/src",
+      "prefix": "lib",
+      "architect": {
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": { "lintFilePatterns": ["shared/environments/**/*.ts"] }
+        }
+      }
+    }
+  }
+}

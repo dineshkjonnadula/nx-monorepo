@@ -1,0 +1,63 @@
+{
+  "name": "project-two",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "projects/project-two/src",
+  "prefix": "app",
+  "tags": ["scope:project-two"],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/projects/project-two",
+        "index": "projects/project-two/src/index.html",
+        "main": "projects/project-two/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "projects/project-two/tsconfig.app.json",
+        "assets": ["projects/project-two/src/favicon.ico", "projects/project-two/src/assets"],
+        "styles": [],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            { "type": "initial", "maximumWarning": "500kb", "maximumError": "1mb" },
+            { "type": "anyComponentStyle", "maximumWarning": "2kb", "maximumError": "4kb" }
+          ],
+          "outputHashing": "all",
+          "optimization": true,
+          "buildOptimizer": true
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "options": { "port": 4300 },
+      "configurations": {
+        "production": { "browserTarget": "project-two:build:production" },
+        "development": { "browserTarget": "project-two:build:development" }
+      },
+      "defaultConfiguration": "development"
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": { "lintFilePatterns": ["projects/project-two/**/*.ts", "projects/project-two/**/*.html"] }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": { "jestConfig": "projects/project-two/jest.config.ts" }
+    }
+  }
+}

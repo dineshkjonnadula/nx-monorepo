@@ -1,0 +1,59 @@
+{
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "plugins": ["@nx"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "scope:project-one",
+                "onlyDependOnLibsWithTags": ["scope:shared", "scope:project-one"]
+              },
+              {
+                "sourceTag": "scope:project-two",
+                "onlyDependOnLibsWithTags": ["scope:shared", "scope:project-two"]
+              },
+              {
+                "sourceTag": "type:feature",
+                "onlyDependOnLibsWithTags": [
+                  "type:feature",
+                  "type:ui",
+                  "type:data-access",
+                  "type:util",
+                  "type:models"
+                ]
+              },
+              {
+                "sourceTag": "type:ui",
+                "onlyDependOnLibsWithTags": ["type:ui", "type:util", "type:models"]
+              },
+              {
+                "sourceTag": "type:data-access",
+                "onlyDependOnLibsWithTags": [
+                  "type:data-access",
+                  "type:util",
+                  "type:models"
+                ]
+              },
+              {
+                "sourceTag": "type:util",
+                "onlyDependOnLibsWithTags": ["type:util", "type:models"]
+              },
+              {
+                "sourceTag": "type:models",
+                "onlyDependOnLibsWithTags": ["type:models"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

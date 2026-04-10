@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+.angular/
+
+# Nx cache
+.nx/cache
+.nx/workspace-data
+
+# Test coverage
+coverage/
+
+# Environment & secrets
+*.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS
+.DS_Store
+Thumbs.db
