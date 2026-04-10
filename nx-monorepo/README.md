@@ -8,13 +8,16 @@ my-workspace/              ← main (Nx workspace root)
 │   ├── project-one/       ← Analytics Portal  (port 4200)
 │   └── project-two/       ← Admin Console     (port 4300)
 ├── shared/
-│   ├── feature-auth/      ← Login, guards, interceptor
-│   ├── feature-notifications/ ← Notification bell
-│   ├── ui-components/     ← Button, Card, Modal
-│   ├── data-access-api/   ← AuthService, NotificationsService
-│   ├── models/            ← Interfaces & types
-│   ├── util-helpers/      ← Date, string utilities
-│   └── environments/      ← APP_ENVIRONMENT token
+│   └── src/
+│       ├── index.ts       ← Public API: @my-workspace/shared
+│       └── lib/
+│           ├── feature-auth/            ← Login, guards, interceptor
+│           ├── feature-notifications/   ← Notification bell
+│           ├── ui-components/           ← Button, Card, Modal
+│           ├── data-access-api/         ← AuthService, NotificationsService
+│           ├── models/                  ← Interfaces & types
+│           ├── util-helpers/            ← Date, string utilities
+│           └── environments/            ← APP_ENVIRONMENT token
 ├── angular.json
 ├── nx.json
 ├── tsconfig.base.json
@@ -42,11 +45,11 @@ npm run start:project-two
 
 ```
 projects/
-  └── shared/feature-*        ← smart (injects services, owns logic)
-        ├── shared/ui-*       ← dumb (inputs/outputs only, no services)
-        └── shared/data-access ← services, HTTP, state
-              ├── shared/util  ← pure functions, no Angular deps
-              └── shared/models ← interfaces, types, enums
+shared/src/lib/feature-*       ← smart (injects services, owns logic)
+  ├── shared/src/lib/ui-*      ← dumb (inputs/outputs only, no services)
+  └── shared/src/lib/data-access-* ← services, HTTP, state
+      ├── shared/src/lib/util-*   ← pure functions, no Angular deps
+      └── shared/src/lib/models   ← interfaces, types, enums
 ```
 
 Each layer may only import from layers **below** it. Violations are caught by ESLint at lint time.
@@ -66,7 +69,7 @@ nx build project-two
 nx affected:build           # only rebuild what changed
 
 # Test
-nx test shared-feature-auth
+nx test shared
 nx affected:test
 
 # Lint (enforces module boundaries)
@@ -77,10 +80,10 @@ nx affected:lint
 nx graph
 
 # Generate a new shared component
-nx g @nx/angular:component my-widget --project=shared-ui-components --standalone
+nx g @nx/angular:component lib/ui-components/lib/my-widget --project=shared --standalone
 
-# Generate a new shared library
-nx g @nx/angular:lib shared/feature-xyz --buildable --tags="scope:shared,type:feature"
+# Generate a new shared feature slice (directory-only under shared/src/lib)
+nx g @nx/angular:library shared-feature-xyz --directory=shared/src/lib --tags="scope:shared,type:feature"
 ```
 
 ---
@@ -100,35 +103,38 @@ nx g @nx/angular:lib shared/feature-xyz --buildable --tags="scope:shared,type:fe
 
 ---
 
-## Shared libraries
+## Shared Library
 
-| Import path | Contents |
-|---|---|
-| `@my-workspace/shared/feature-auth` | `LoginComponent`, `authGuard`, `guestGuard`, `authInterceptor`, `AUTH_ROUTES` |
-| `@my-workspace/shared/feature-notifications` | `NotificationBellComponent` |
-| `@my-workspace/shared/ui-components` | `ButtonComponent`, `CardComponent`, `ModalComponent` |
-| `@my-workspace/shared/data-access-api` | `AuthService`, `NotificationsService` |
-| `@my-workspace/shared/models` | `User`, `AuthUser`, `Notification`, `ApiResponse<T>` |
-| `@my-workspace/shared/util-helpers` | `formatDate`, `timeAgo`, `slugify`, `isValidEmail` … |
-| `@my-workspace/shared/environments` | `AppEnvironment`, `APP_ENVIRONMENT` token |
+Single public import path: `@my-workspace/shared`
+
+Examples exported from this path:
+
+- `LoginComponent`, `authGuard`, `authInterceptor`, `AUTH_ROUTES`
+- `NotificationBellComponent`
+- `ButtonComponent`, `CardComponent`, `ModalComponent`
+- `AuthService`, `NotificationsService`
+- `User`, `AuthUser`, `Notification`, `ApiResponse<T>`
+- `formatDate`, `timeAgo`, `slugify`, `isValidEmail`
+- `AppEnvironment`, `APP_ENVIRONMENT`
+
 
 ---
 
-## Adding a new shared library
+## Adding Shared Code
 
 ```bash
-# 1. Generate
-nx g @nx/angular:lib shared/feature-my-feature \
-  --buildable \
-  --tags="scope:shared,type:feature"
+# 1. Create your folder under shared/src/lib (example: shared/src/lib/feature-my-feature)
 
-# 2. Build your components/services in shared/feature-my-feature/src/lib/
+# 2. Build your components/services in shared/src/lib/feature-my-feature/lib/
 
-# 3. Export from the public barrel
-#    shared/feature-my-feature/src/index.ts
+# 3. Export from the feature barrel
+#    shared/src/lib/feature-my-feature/index.ts
 
-# 4. Import anywhere
-import { MyThing } from '@my-workspace/shared/feature-my-feature';
+# 4. Re-export from the root shared barrel
+#    shared/src/index.ts
+
+# 5. Import anywhere
+import { MyThing } from '@my-workspace/shared';
 ```
 
 ## Project-specific features

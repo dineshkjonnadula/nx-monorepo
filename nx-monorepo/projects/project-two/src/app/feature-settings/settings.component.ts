@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { CardComponent, ButtonComponent } from '@my-workspace/shared/ui-components';
+import { CardComponent, ButtonComponent } from '@my-workspace/shared';
 
 interface SettingSection { id: string; label: string; icon: string; }
 

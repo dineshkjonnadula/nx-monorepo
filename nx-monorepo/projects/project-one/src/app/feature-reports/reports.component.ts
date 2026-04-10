@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardComponent, ButtonComponent } from '@my-workspace/shared/ui-components';
-import { formatDate } from '@my-workspace/shared/util-helpers';
+import { CardComponent, ButtonComponent } from '@my-workspace/shared';
+import { formatDate } from '@my-workspace/shared';
 
 interface Report {
   id: string;

@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { authGuard, AUTH_ROUTES } from '@my-workspace/shared/feature-auth';
+import { authGuard, AUTH_ROUTES } from '@my-workspace/shared';
 
 export const appRoutes: Routes = [
   {

@@ -1,4 +1,4 @@
-import { AppEnvironment } from '@my-workspace/shared/environments';
+import { AppEnvironment } from '@my-workspace/shared';
 
 export const environment: AppEnvironment = {
   production: true,

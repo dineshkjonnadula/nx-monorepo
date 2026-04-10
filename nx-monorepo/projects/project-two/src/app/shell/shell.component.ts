@@ -1,8 +1,8 @@
 import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { AuthService } from '@my-workspace/shared/data-access-api';
-import { NotificationBellComponent } from '@my-workspace/shared/feature-notifications';
+import { AuthService } from '@my-workspace/shared';
+import { NotificationBellComponent } from '@my-workspace/shared';
 
 @Component({
   selector: 'app-shell',

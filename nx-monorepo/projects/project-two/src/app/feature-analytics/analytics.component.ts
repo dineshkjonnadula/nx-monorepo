@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardComponent, ButtonComponent } from '@my-workspace/shared/ui-components';
+import { CardComponent, ButtonComponent } from '@my-workspace/shared';
 
 interface ChartBar { label: string; value: number; pct: number; }
 

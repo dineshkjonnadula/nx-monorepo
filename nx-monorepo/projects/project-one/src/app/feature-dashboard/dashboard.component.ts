@@ -1,9 +1,9 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { AuthService } from '@my-workspace/shared/data-access-api';
-import { CardComponent } from '@my-workspace/shared/ui-components';
-import { NotificationBellComponent } from '@my-workspace/shared/feature-notifications';
+import { AuthService } from '@my-workspace/shared';
+import { CardComponent } from '@my-workspace/shared';
+import { NotificationBellComponent } from '@my-workspace/shared';
 
 interface Metric {
   label: string;

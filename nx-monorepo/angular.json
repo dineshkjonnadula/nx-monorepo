@@ -156,87 +156,15 @@
         }
       }
     },
-    "shared-feature-auth": {
+    "shared": {
       "projectType": "library",
-      "root": "shared/feature-auth",
-      "sourceRoot": "shared/feature-auth/src",
+      "root": "shared",
+      "sourceRoot": "shared/src",
       "prefix": "lib",
       "architect": {
         "lint": {
           "builder": "@angular-eslint/builder:lint",
-          "options": { "lintFilePatterns": ["shared/feature-auth/**/*.ts"] }
-        }
-      }
-    },
-    "shared-feature-notifications": {
-      "projectType": "library",
-      "root": "shared/feature-notifications",
-      "sourceRoot": "shared/feature-notifications/src",
-      "prefix": "lib",
-      "architect": {
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": { "lintFilePatterns": ["shared/feature-notifications/**/*.ts"] }
-        }
-      }
-    },
-    "shared-ui-components": {
-      "projectType": "library",
-      "root": "shared/ui-components",
-      "sourceRoot": "shared/ui-components/src",
-      "prefix": "lib",
-      "architect": {
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": { "lintFilePatterns": ["shared/ui-components/**/*.ts"] }
-        }
-      }
-    },
-    "shared-data-access-api": {
-      "projectType": "library",
-      "root": "shared/data-access-api",
-      "sourceRoot": "shared/data-access-api/src",
-      "prefix": "lib",
-      "architect": {
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": { "lintFilePatterns": ["shared/data-access-api/**/*.ts"] }
-        }
-      }
-    },
-    "shared-models": {
-      "projectType": "library",
-      "root": "shared/models",
-      "sourceRoot": "shared/models/src",
-      "prefix": "lib",
-      "architect": {
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": { "lintFilePatterns": ["shared/models/**/*.ts"] }
-        }
-      }
-    },
-    "shared-util-helpers": {
-      "projectType": "library",
-      "root": "shared/util-helpers",
-      "sourceRoot": "shared/util-helpers/src",
-      "prefix": "lib",
-      "architect": {
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": { "lintFilePatterns": ["shared/util-helpers/**/*.ts"] }
-        }
-      }
-    },
-    "shared-environments": {
-      "projectType": "library",
-      "root": "shared/environments",
-      "sourceRoot": "shared/environments/src",
-      "prefix": "lib",
-      "architect": {
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": { "lintFilePatterns": ["shared/environments/**/*.ts"] }
+          "options": { "lintFilePatterns": ["shared/**/*.ts"] }
         }
       }
     }
