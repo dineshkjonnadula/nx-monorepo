@@ -2520,81 +2520,81 @@
         "hash": "10c0/d47697902f6babc55c1d7e1a7bd886074ac42b55fb3a083ee58985ff9ac1bf8b67225089fbdc150d811ed2076b94415d7f88a7cbc7207bda6ccd042ada94f15d"
       }
     },
-    "npm:@nx/nx-darwin-arm64": {
+    "npm:@nx/nx-darwin-arm64@17.0.0": {
       "type": "npm",
-      "name": "npm:@nx/nx-darwin-arm64",
+      "name": "npm:@nx/nx-darwin-arm64@17.0.0",
       "data": {
         "version": "17.0.0",
         "packageName": "@nx/nx-darwin-arm64",
         "hash": "7605145976238837399"
       }
     },
-    "npm:@nx/nx-darwin-x64": {
+    "npm:@nx/nx-darwin-x64@17.0.0": {
       "type": "npm",
-      "name": "npm:@nx/nx-darwin-x64",
+      "name": "npm:@nx/nx-darwin-x64@17.0.0",
       "data": {
         "version": "17.0.0",
         "packageName": "@nx/nx-darwin-x64",
         "hash": "11835289601357647858"
       }
     },
-    "npm:@nx/nx-freebsd-x64": {
+    "npm:@nx/nx-freebsd-x64@17.0.0": {
       "type": "npm",
-      "name": "npm:@nx/nx-freebsd-x64",
+      "name": "npm:@nx/nx-freebsd-x64@17.0.0",
       "data": {
         "version": "17.0.0",
         "packageName": "@nx/nx-freebsd-x64",
         "hash": "2526646201379237223"
       }
     },
-    "npm:@nx/nx-linux-arm-gnueabihf": {
+    "npm:@nx/nx-linux-arm-gnueabihf@17.0.0": {
       "type": "npm",
-      "name": "npm:@nx/nx-linux-arm-gnueabihf",
+      "name": "npm:@nx/nx-linux-arm-gnueabihf@17.0.0",
       "data": {
         "version": "17.0.0",
         "packageName": "@nx/nx-linux-arm-gnueabihf",
         "hash": "3664338096682699198"
       }
     },
-    "npm:@nx/nx-linux-arm64-gnu": {
+    "npm:@nx/nx-linux-arm64-gnu@17.0.0": {
       "type": "npm",
-      "name": "npm:@nx/nx-linux-arm64-gnu",
+      "name": "npm:@nx/nx-linux-arm64-gnu@17.0.0",
       "data": {
         "version": "17.0.0",
         "packageName": "@nx/nx-linux-arm64-gnu",
         "hash": "8836072585012283961"
       }
     },
-    "npm:@nx/nx-linux-arm64-musl": {
+    "npm:@nx/nx-linux-arm64-musl@17.0.0": {
       "type": "npm",
-      "name": "npm:@nx/nx-linux-arm64-musl",
+      "name": "npm:@nx/nx-linux-arm64-musl@17.0.0",
       "data": {
         "version": "17.0.0",
         "packageName": "@nx/nx-linux-arm64-musl",
         "hash": "8553901837158927932"
       }
     },
-    "npm:@nx/nx-linux-x64-gnu": {
+    "npm:@nx/nx-linux-x64-gnu@17.0.0": {
       "type": "npm",
-      "name": "npm:@nx/nx-linux-x64-gnu",
+      "name": "npm:@nx/nx-linux-x64-gnu@17.0.0",
       "data": {
         "version": "17.0.0",
         "packageName": "@nx/nx-linux-x64-gnu",
         "hash": "2114820966297968847"
       }
     },
-    "npm:@nx/nx-linux-x64-musl": {
+    "npm:@nx/nx-linux-x64-musl@17.0.0": {
       "type": "npm",
-      "name": "npm:@nx/nx-linux-x64-musl",
+      "name": "npm:@nx/nx-linux-x64-musl@17.0.0",
       "data": {
         "version": "17.0.0",
         "packageName": "@nx/nx-linux-x64-musl",
         "hash": "6231945703941804435"
       }
     },
-    "npm:@nx/nx-win32-arm64-msvc": {
+    "npm:@nx/nx-win32-arm64-msvc@17.0.0": {
       "type": "npm",
-      "name": "npm:@nx/nx-win32-arm64-msvc",
+      "name": "npm:@nx/nx-win32-arm64-msvc@17.0.0",
       "data": {
         "version": "17.0.0",
         "packageName": "@nx/nx-win32-arm64-msvc",
@@ -9583,6 +9583,15 @@
         "version": "8.5.9",
         "packageName": "postcss",
         "hash": "10c0/7cb2b32202ea1ead03f15cfbb2756a64a0f98942378e99b3dfce33678fe5eaf93e31d675a46e3a0dfb417d7b49b82d8999d0dd42a33c3b128e71ade0f978719a"
+      }
+    },
+    "npm:prettier": {
+      "type": "npm",
+      "name": "npm:prettier",
+      "data": {
+        "version": "3.8.2",
+        "packageName": "prettier",
+        "hash": "10c0/2d64bd01d269c8dd6d8c423a2a2e1fb88230a53aac523204b327de40059ccf8bd8e6fe70b8ce6154b97ed4442e9fd878504ff8a5330f3a4f64bd13d1576f7652"
       }
     },
     "npm:pretty-format": {
@@ -26235,47 +26244,47 @@
     },
     {
       "source": "npm:nx",
-      "target": "npm:@nx/nx-darwin-arm64",
+      "target": "npm:@nx/nx-darwin-arm64@17.0.0",
       "type": "static"
     },
     {
       "source": "npm:nx",
-      "target": "npm:@nx/nx-darwin-x64",
+      "target": "npm:@nx/nx-darwin-x64@17.0.0",
       "type": "static"
     },
     {
       "source": "npm:nx",
-      "target": "npm:@nx/nx-freebsd-x64",
+      "target": "npm:@nx/nx-freebsd-x64@17.0.0",
       "type": "static"
     },
     {
       "source": "npm:nx",
-      "target": "npm:@nx/nx-linux-arm-gnueabihf",
+      "target": "npm:@nx/nx-linux-arm-gnueabihf@17.0.0",
       "type": "static"
     },
     {
       "source": "npm:nx",
-      "target": "npm:@nx/nx-linux-arm64-gnu",
+      "target": "npm:@nx/nx-linux-arm64-gnu@17.0.0",
       "type": "static"
     },
     {
       "source": "npm:nx",
-      "target": "npm:@nx/nx-linux-arm64-musl",
+      "target": "npm:@nx/nx-linux-arm64-musl@17.0.0",
       "type": "static"
     },
     {
       "source": "npm:nx",
-      "target": "npm:@nx/nx-linux-x64-gnu",
+      "target": "npm:@nx/nx-linux-x64-gnu@17.0.0",
       "type": "static"
     },
     {
       "source": "npm:nx",
-      "target": "npm:@nx/nx-linux-x64-musl",
+      "target": "npm:@nx/nx-linux-x64-musl@17.0.0",
       "type": "static"
     },
     {
       "source": "npm:nx",
-      "target": "npm:@nx/nx-win32-arm64-msvc",
+      "target": "npm:@nx/nx-win32-arm64-msvc@17.0.0",
       "type": "static"
     },
     {
